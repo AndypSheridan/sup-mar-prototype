@@ -23,7 +23,7 @@ let canScore = true;
 
 
 function startGame() {
-    player = new Player(150,350,50,"black");
+    player = new Player(150,350,50,"yellow");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0;
@@ -149,7 +149,7 @@ class Player {
 }
 
 //Initialise instance of player class
-let player = new Player(150,350,50,"black");
+let player = new Player(150,350,50,"yellow");
 
 class AvoidBlock {
     constructor(size, speed){
