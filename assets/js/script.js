@@ -1,3 +1,5 @@
+import marion from '../images/marion.png'
+
 //Extract context to allow interaction with canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
