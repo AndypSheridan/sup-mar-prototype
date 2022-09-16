@@ -21,7 +21,7 @@ let scoreIncrement = 0;
 let canScore = true;
 
 function startGame() {
-    player = new Player(150,350,50,"yellow");
+    player = new Player(150,350,50,"#000080");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0;
@@ -50,7 +50,7 @@ function drawBackgroundLine() {
 
 function drawScore() {
     ctx.font = "64px 'Press Start 2P'";
-    ctx.fillStyle = "#F55200";
+    ctx.fillStyle = "#FF0000";
     let scoreString = score.toString();
     let xOffset = ((scoreString.length - 1) * 20);
     ctx.fillText(scoreString, 280 - xOffset, 100);
@@ -148,7 +148,7 @@ class Player {
 }
 
 //Initialise instance of player class
-let player = new Player(150,350,50,"yellow");
+let player = new Player(150,350,50,"#000080");
 
 
 class AvoidBlock {
