@@ -1,5 +1,3 @@
-import marion from '../images/marion.png'
-
 //Extract context to allow interaction with canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -7,14 +5,13 @@ const ctx = canvas.getContext("2d");
 const card = document.getElementById("card");
 const cardScore = document.getElementById("card-score");
 
-
 //Game SFX
 let scoreSFX = new Audio("https://archive.org/download/classiccoin/classiccoin.wav");
 let gameOverSFX = new Audio("https://archive.org/download/smb_gameover/smb_gameover.wav");
 let jumpSFX = new Audio("https://archive.org/download/jump_20210424/jump.wav");
 
 //Used for 'setInterval'
-let presetTime = 1000;
+let presetTime = 1200;
 //Blocks can speed up when player has scored points at intervals of 10
 let enemySpeed = 5;
 let score = 0;
@@ -23,7 +20,6 @@ let scoreIncrement = 0;
 //So cube doesn't score more than one point at a time!
 let canScore = true;
 
-
 function startGame() {
     player = new Player(150,350,50,"yellow");
     arrayBlocks = [];
@@ -31,7 +27,7 @@ function startGame() {
     scoreIncrement = 0;
     enemySpeed = 5;
     canScore = true;
-    presetTime = 1000;
+    presetTime = 1200;
 }
 
 //Restart game
@@ -48,13 +44,13 @@ function drawBackgroundLine() {
     ctx.moveTo(0,400);
     ctx.lineTo(600,400);
     ctx.lineWidth = 1;
-    ctx.strokeStyle = "#794622";
+    ctx.strokeStyle = 'transparent';
     ctx.stroke();
 }
 
 function drawScore() {
-    ctx.font = "80px Arial";
-    ctx.fillStyle = "black";
+    ctx.font = "64px 'Press Start 2P'";
+    ctx.fillStyle = "#F55200";
     let scoreString = score.toString();
     let xOffset = ((scoreString.length - 1) * 20);
     ctx.fillText(scoreString, 280 - xOffset, 100);
@@ -82,6 +78,7 @@ class Player {
         this.y = y;
         this.size = size;
         this.color = color;
+
         //Jump configuration
         this.jumpHeight = 12;
         this.shouldJump = false;
@@ -89,7 +86,7 @@ class Player {
         this.jumpUp = true;
         //Related to spin animation
         this.spin = 0;
-        //Get a perfect 90 degree rotation
+        //Get a 360 degree rotation
         this.spinIncrement = 360 / 32;
     }
 
@@ -152,6 +149,7 @@ class Player {
 
 //Initialise instance of player class
 let player = new Player(150,350,50,"yellow");
+
 
 class AvoidBlock {
     constructor(size, speed){
