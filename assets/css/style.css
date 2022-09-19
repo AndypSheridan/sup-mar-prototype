@@ -485,7 +485,7 @@ h1 {
     object-fit: contain;
   }
   #card{
-    width: 80%;
-    object-fit: contain;
+    max-width: max-content;
+    padding: 5%;
   }
 }
