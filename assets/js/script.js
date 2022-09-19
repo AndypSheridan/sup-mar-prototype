@@ -21,7 +21,7 @@ let scoreIncrement = 0;
 let canScore = true;
 
 function startGame() {
-    player = new Player(150,350,50,"#DADBD0");
+    player = new Player(150,390,50,"#DADBD0");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0;
@@ -148,13 +148,13 @@ class Player {
 }
 
 //Initialise instance of player class
-let player = new Player(150,350,50,"#dadbd0");
+let player = new Player(150,390,50,"#dadbd0");
 
 
 class AvoidBlock {
     constructor(size, speed){
         this.x = canvas.width + size;
-        this.y = 400 - size;
+        this.y = 440 - size;
         this.size = size;
         this.color = "red";
         this.slideSpeed = speed;
