@@ -479,3 +479,13 @@ h1 {
 
 /* Media Query 600px and smaller */
 
+@media only screen and (max-width: 600px) {
+  #canvas {
+    width: 100%;
+    object-fit: contain;
+  }
+  #card{
+    width: 80%;
+    object-fit: contain;
+  }
+}
