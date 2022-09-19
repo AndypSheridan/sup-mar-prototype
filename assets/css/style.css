@@ -1,83 +1,481 @@
-/* Google font 'Press Start 2p' */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-* {
-    box-sizing: border-box;
-    font-family: 'Press Start 2P', cursive, Helvetica, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 body {
-    background-image: url('../images/1155251.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    /*background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-    background-attachment: fixed; */
-    color: #000;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #758CDE 0%, #0c0d13 100%);
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+h1 {
+  color: #DADBD0;
+  position: absolute;
+  top: 0;
 }
 
 #canvas {
-    border-radius: 5px;
-    background-image: url("../images/supmarionbg.png");
-    background-size: cover;
+  border-radius: 5px;
+  background-image: url('../images/desertedplanet.jpg');
+  background-size: cover;
 }
 
 #overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: fff;
-    text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #overlay #card {
-    background-color: #DADBD0;
-    width: 500px;
-    height: 190px;
-    border: 1px solid black;
-    border-radius: 5px;
-    animation: cardIn 1s forwards;
-    display: none;
+  background-color: #DADBD0;
+  width: 500px;
+  height: 190px;
+  border: 1px solid black;
+  border-radius: 5px;
+  animation: cardIn 1s forwards;
+  display: none;
 }
 
 #overlay #card > p {
-    font-size: 32px;
-    margin-top: 45px;
-    user-select: none;
+  font-size: 32px;
+  margin-top: 45px;
+  user-select: none;
 }
 
 #overlay #card > button {
-    outline: none;
-    color: #000;
-    border: 1px solid #000;
-    background-image: linear-gradient(to right, #0000ff, #ffff00, #ff0000, #00ff00);
-    padding: 10px;
-    width: 90%;
-    border-radius: 20px;
-    font-size: 20px;
-    cursor: pointer;
+  outline: none;
+  color: #DADBD0;
+  border: 1px solid #000;
+  background-image: linear-gradient(to right, #758CDE, #0c0d13);
+  padding: 10px;
+  width: 90%;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 @keyframes cardIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
 }
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  transform: rotate(-45deg);
+}
+
+.star {
+  --star-color: var(--primary-color);
+  --star-tail-length: 6em;
+  --star-tail-height: 2px;
+  --star-width: calc(var(--star-tail-length) / 6);
+  --fall-duration: 9s;
+  --tail-fade-duration: var(--fall-duration);
+  position: absolute;
+  top: var(--top-offset);
+  left: 0;
+  width: var(--star-tail-length);
+  height: var(--star-tail-height);
+  color: var(--star-color);
+  background: linear-gradient(45deg, currentColor, transparent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px currentColor);
+  transform: translate3d(104em, 0, 0);
+  -webkit-animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+          animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+}
+@media screen and (max-width: 750px) {
+  .star {
+    -webkit-animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+            animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+  }
+}
+.star:nth-child(1) {
+  --star-tail-length: 6.49em;
+  --top-offset: 61.24vh;
+  --fall-duration: 7.126s;
+  --fall-delay: 9.347s;
+}
+.star:nth-child(2) {
+  --star-tail-length: 6.23em;
+  --top-offset: 43.68vh;
+  --fall-duration: 10.462s;
+  --fall-delay: 7.957s;
+}
+.star:nth-child(3) {
+  --star-tail-length: 5.01em;
+  --top-offset: 96.7vh;
+  --fall-duration: 11.807s;
+  --fall-delay: 7.433s;
+}
+.star:nth-child(4) {
+  --star-tail-length: 5.76em;
+  --top-offset: 99.37vh;
+  --fall-duration: 9.143s;
+  --fall-delay: 8.067s;
+}
+.star:nth-child(5) {
+  --star-tail-length: 5.18em;
+  --top-offset: 60.64vh;
+  --fall-duration: 9.502s;
+  --fall-delay: 4.992s;
+}
+.star:nth-child(6) {
+  --star-tail-length: 7.15em;
+  --top-offset: 43.84vh;
+  --fall-duration: 9.939s;
+  --fall-delay: 9.91s;
+}
+.star:nth-child(7) {
+  --star-tail-length: 7.39em;
+  --top-offset: 80.38vh;
+  --fall-duration: 7.969s;
+  --fall-delay: 7.548s;
+}
+.star:nth-child(8) {
+  --star-tail-length: 5.02em;
+  --top-offset: 90.68vh;
+  --fall-duration: 7.307s;
+  --fall-delay: 3.123s;
+}
+.star:nth-child(9) {
+  --star-tail-length: 7.14em;
+  --top-offset: 51.99vh;
+  --fall-duration: 10.421s;
+  --fall-delay: 3.125s;
+}
+.star:nth-child(10) {
+  --star-tail-length: 6.38em;
+  --top-offset: 73.89vh;
+  --fall-duration: 8.11s;
+  --fall-delay: 8.403s;
+}
+.star:nth-child(11) {
+  --star-tail-length: 5.37em;
+  --top-offset: 39.08vh;
+  --fall-duration: 6.314s;
+  --fall-delay: 9.196s;
+}
+.star:nth-child(12) {
+  --star-tail-length: 7.5em;
+  --top-offset: 40.98vh;
+  --fall-duration: 6.456s;
+  --fall-delay: 9.68s;
+}
+.star:nth-child(13) {
+  --star-tail-length: 6.25em;
+  --top-offset: 81.89vh;
+  --fall-duration: 6.43s;
+  --fall-delay: 8.036s;
+}
+.star:nth-child(14) {
+  --star-tail-length: 6.16em;
+  --top-offset: 63.53vh;
+  --fall-duration: 9.845s;
+  --fall-delay: 9.35s;
+}
+.star:nth-child(15) {
+  --star-tail-length: 5.25em;
+  --top-offset: 92.56vh;
+  --fall-duration: 8.63s;
+  --fall-delay: 9.717s;
+}
+.star:nth-child(16) {
+  --star-tail-length: 6.64em;
+  --top-offset: 24.84vh;
+  --fall-duration: 11.389s;
+  --fall-delay: 9.735s;
+}
+.star:nth-child(17) {
+  --star-tail-length: 6.02em;
+  --top-offset: 41.88vh;
+  --fall-duration: 6.525s;
+  --fall-delay: 4.639s;
+}
+.star:nth-child(18) {
+  --star-tail-length: 6.84em;
+  --top-offset: 33.19vh;
+  --fall-duration: 11.977s;
+  --fall-delay: 9.036s;
+}
+.star:nth-child(19) {
+  --star-tail-length: 5.34em;
+  --top-offset: 39.54vh;
+  --fall-duration: 8.198s;
+  --fall-delay: 3.866s;
+}
+.star:nth-child(20) {
+  --star-tail-length: 5.75em;
+  --top-offset: 54.7vh;
+  --fall-duration: 9.921s;
+  --fall-delay: 1.572s;
+}
+.star:nth-child(21) {
+  --star-tail-length: 5.92em;
+  --top-offset: 24.82vh;
+  --fall-duration: 10.237s;
+  --fall-delay: 9.799s;
+}
+.star:nth-child(22) {
+  --star-tail-length: 5.18em;
+  --top-offset: 96.84vh;
+  --fall-duration: 10.269s;
+  --fall-delay: 2.093s;
+}
+.star:nth-child(23) {
+  --star-tail-length: 5.21em;
+  --top-offset: 57.8vh;
+  --fall-duration: 7.753s;
+  --fall-delay: 5.978s;
+}
+.star:nth-child(24) {
+  --star-tail-length: 6.59em;
+  --top-offset: 30.65vh;
+  --fall-duration: 9.959s;
+  --fall-delay: 2.564s;
+}
+.star:nth-child(25) {
+  --star-tail-length: 7.1em;
+  --top-offset: 19.76vh;
+  --fall-duration: 8.78s;
+  --fall-delay: 6.468s;
+}
+.star:nth-child(26) {
+  --star-tail-length: 5.63em;
+  --top-offset: 19.16vh;
+  --fall-duration: 7.976s;
+  --fall-delay: 7.664s;
+}
+.star:nth-child(27) {
+  --star-tail-length: 7.01em;
+  --top-offset: 43.48vh;
+  --fall-duration: 10.638s;
+  --fall-delay: 7.532s;
+}
+.star:nth-child(28) {
+  --star-tail-length: 7.5em;
+  --top-offset: 25.47vh;
+  --fall-duration: 6.392s;
+  --fall-delay: 5.218s;
+}
+.star:nth-child(29) {
+  --star-tail-length: 5.92em;
+  --top-offset: 71.2vh;
+  --fall-duration: 8.807s;
+  --fall-delay: 9.084s;
+}
+.star:nth-child(30) {
+  --star-tail-length: 6.48em;
+  --top-offset: 56.54vh;
+  --fall-duration: 7.321s;
+  --fall-delay: 0.038s;
+}
+.star:nth-child(31) {
+  --star-tail-length: 7.06em;
+  --top-offset: 53.19vh;
+  --fall-duration: 8.246s;
+  --fall-delay: 2.784s;
+}
+.star:nth-child(32) {
+  --star-tail-length: 7.43em;
+  --top-offset: 63.52vh;
+  --fall-duration: 10.304s;
+  --fall-delay: 2.606s;
+}
+.star:nth-child(33) {
+  --star-tail-length: 6.55em;
+  --top-offset: 79.31vh;
+  --fall-duration: 11.91s;
+  --fall-delay: 4.614s;
+}
+.star:nth-child(34) {
+  --star-tail-length: 6.58em;
+  --top-offset: 13.12vh;
+  --fall-duration: 6.986s;
+  --fall-delay: 9.403s;
+}
+.star:nth-child(35) {
+  --star-tail-length: 5.34em;
+  --top-offset: 29.35vh;
+  --fall-duration: 11.171s;
+  --fall-delay: 1.466s;
+}
+.star:nth-child(36) {
+  --star-tail-length: 6.17em;
+  --top-offset: 30.49vh;
+  --fall-duration: 10.38s;
+  --fall-delay: 7.393s;
+}
+.star:nth-child(37) {
+  --star-tail-length: 7.35em;
+  --top-offset: 2.54vh;
+  --fall-duration: 9.075s;
+  --fall-delay: 0.965s;
+}
+.star:nth-child(38) {
+  --star-tail-length: 6.71em;
+  --top-offset: 64.45vh;
+  --fall-duration: 11.477s;
+  --fall-delay: 0.663s;
+}
+.star:nth-child(39) {
+  --star-tail-length: 6.86em;
+  --top-offset: 39.23vh;
+  --fall-duration: 9.909s;
+  --fall-delay: 7.947s;
+}
+.star:nth-child(40) {
+  --star-tail-length: 5.74em;
+  --top-offset: 79.86vh;
+  --fall-duration: 10.367s;
+  --fall-delay: 5.354s;
+}
+.star:nth-child(41) {
+  --star-tail-length: 5.93em;
+  --top-offset: 30.38vh;
+  --fall-duration: 10.951s;
+  --fall-delay: 7.183s;
+}
+.star:nth-child(42) {
+  --star-tail-length: 6.6em;
+  --top-offset: 21.33vh;
+  --fall-duration: 11.47s;
+  --fall-delay: 7.983s;
+}
+.star:nth-child(43) {
+  --star-tail-length: 6.45em;
+  --top-offset: 69.62vh;
+  --fall-duration: 9.419s;
+  --fall-delay: 2.203s;
+}
+.star:nth-child(44) {
+  --star-tail-length: 7.49em;
+  --top-offset: 6.36vh;
+  --fall-duration: 6.376s;
+  --fall-delay: 8.696s;
+}
+.star:nth-child(45) {
+  --star-tail-length: 6.07em;
+  --top-offset: 87.45vh;
+  --fall-duration: 8.762s;
+  --fall-delay: 0.874s;
+}
+.star:nth-child(46) {
+  --star-tail-length: 6.4em;
+  --top-offset: 54.26vh;
+  --fall-duration: 6.265s;
+  --fall-delay: 6.648s;
+}
+.star:nth-child(47) {
+  --star-tail-length: 6.62em;
+  --top-offset: 50.88vh;
+  --fall-duration: 6.685s;
+  --fall-delay: 5.88s;
+}
+.star:nth-child(48) {
+  --star-tail-length: 6.09em;
+  --top-offset: 95.65vh;
+  --fall-duration: 7.114s;
+  --fall-delay: 2.825s;
+}
+.star:nth-child(49) {
+  --star-tail-length: 5.98em;
+  --top-offset: 83.44vh;
+  --fall-duration: 9.645s;
+  --fall-delay: 5.424s;
+}
+.star:nth-child(50) {
+  --star-tail-length: 5.48em;
+  --top-offset: 76vh;
+  --fall-duration: 6.003s;
+  --fall-delay: 4.93s;
+}
+.star::before, .star::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: calc(var(--star-width) / -2);
+  width: var(--star-width);
+  height: 100%;
+  background: linear-gradient(45deg, transparent, currentColor, transparent);
+  border-radius: inherit;
+  -webkit-animation: blink 2s linear infinite;
+          animation: blink 2s linear infinite;
+}
+.star::before {
+  transform: rotate(45deg);
+}
+.star::after {
+  transform: rotate(-45deg);
+}
+
+@-webkit-keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+@-webkit-keyframes tail-fade {
+  0%, 50% {
+    width: var(--star-tail-length);
+    opacity: 1;
+  }
+  70%, 80% {
+    width: 0;
+    opacity: 0.4;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+@keyframes tail-fade {
+  0%, 50% {
+    width: var(--star-tail-length);
+    opacity: 1;
+  }
+  70%, 80% {
+    width: 0;
+    opacity: 0.4;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.6;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0.6;
+  }
+}/*# sourceMappingURL=style.css.map */
+
+/* Media Query 600px and smaller */
+

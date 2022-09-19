@@ -21,7 +21,7 @@ let scoreIncrement = 0;
 let canScore = true;
 
 function startGame() {
-    player = new Player(150,350,50,"#000080");
+    player = new Player(150,350,50,"#DADBD0");
     arrayBlocks = [];
     score = 0;
     scoreIncrement = 0;
@@ -49,8 +49,8 @@ function drawBackgroundLine() {
 }
 
 function drawScore() {
-    ctx.font = "64px 'Press Start 2P'";
-    ctx.fillStyle = "#FF0000";
+    ctx.font = "64px 'IBM Plex Mono'";
+    ctx.fillStyle = "#DADBD0";
     let scoreString = score.toString();
     let xOffset = ((scoreString.length - 1) * 20);
     ctx.fillText(scoreString, 280 - xOffset, 100);
@@ -148,7 +148,7 @@ class Player {
 }
 
 //Initialise instance of player class
-let player = new Player(150,350,50,"#000080");
+let player = new Player(150,350,50,"#dadbd0");
 
 
 class AvoidBlock {
