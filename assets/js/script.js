@@ -44,7 +44,7 @@ function drawBackgroundLine() {
     ctx.moveTo(0,440);
     ctx.lineTo(600,440);
     ctx.lineWidth = 1;
-    ctx.strokeStyle = '#dadbd0';
+    ctx.strokeStyle = 'transparent';
     ctx.stroke();
 }
 
@@ -156,7 +156,7 @@ class AvoidBlock {
         this.x = canvas.width + size;
         this.y = 440 - size;
         this.size = size;
-        this.color = "red";
+        this.color = "#000";
         this.slideSpeed = speed;
     }
     draw() {
