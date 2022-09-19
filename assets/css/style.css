@@ -484,6 +484,13 @@ h1 {
     width: 100%;
     object-fit: contain;
   }
+
+  h1{
+    text-align: center;
+    margin-top: 20%;
+    padding: 10px
+  }
+  
   #card{
     max-width: max-content;
     padding: 5%;
