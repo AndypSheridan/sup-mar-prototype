@@ -41,10 +41,10 @@ function restartGame(button){
 //Create horizontal line across width of canvas
 function drawBackgroundLine() {
     ctx.beginPath();
-    ctx.moveTo(0,400);
-    ctx.lineTo(600,400);
+    ctx.moveTo(0,440);
+    ctx.lineTo(600,440);
     ctx.lineWidth = 1;
-    ctx.strokeStyle = 'transparent';
+    ctx.strokeStyle = '#dadbd0';
     ctx.stroke();
 }
 
