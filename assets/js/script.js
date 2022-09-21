@@ -1,3 +1,11 @@
+const splash = document.querySelector('.splash');
+
+document.addEventListener('DOMContentLoaded', (e)=>{
+    setTimeout(()=>{
+        splash.classList.add('display-none');
+    }, 10000);
+})
+
 //Extract context to allow interaction with canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
