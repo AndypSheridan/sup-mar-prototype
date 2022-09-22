@@ -296,6 +296,7 @@ addEventListener("keydown", e => {
 //Touch to jump event listener
 addEventListener("touchstart", e => {
     if(e === "touchstart"){
+        e.preventDefault()
         if(!player.shouldJump){
             jumpSFX.play();
             player.jumpCounter = 0;
