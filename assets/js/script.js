@@ -294,14 +294,13 @@ addEventListener("keydown", e => {
 })*/
 
 //Touch to jump event listener
-addEventListener('touchstart', 'keydown', e => {
-    if(e.type === 'touchstart' || e.code === 'Space'){
+addEventListener("touchstart", "keydown", e => {
+    if(e.type === "touchstart" || e.code === "Space"){
         if(!player.shouldJump){
             jumpSFX.play();
             player.jumpCounter = 0;
             player.shouldJump = true;
             canScore = true;
-            e.preventDefault()
         }
     }
 })
