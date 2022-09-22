@@ -301,8 +301,8 @@ document.addEventListener('touchstart', 'keydown', e => {
             player.jumpCounter = 0;
             player.shouldJump = true;
             canScore = true;
+            e.preventDefault()
         }
-        e.preventDefault()
     }
 })
 
