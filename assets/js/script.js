@@ -281,7 +281,7 @@ setTimeout(() => {
     generateBlocks();
 }, randomNumberInterval(presetTime))
 
-//Event Listeners
+/*//Event Listeners
 addEventListener("keydown", e => {
     if(e.code === "Space"){
         if(!player.shouldJump){
@@ -291,18 +291,18 @@ addEventListener("keydown", e => {
             canScore = true;
         }
     }
-})
+})*/
 
 //Touch to jump event listener
-document.addEventListener("touchstart", e => {
-    if(e.type === "touchstart"){
-        e.preventDefault()
+document.addEventListener('touchstart', 'keydown', e => {
+    if(e.type === 'touchstart' || e.code === 'Space'){
         if(!player.shouldJump){
             jumpSFX.play();
             player.jumpCounter = 0;
             player.shouldJump = true;
             canScore = true;
         }
+        e.preventDefault()
     }
 })
 
