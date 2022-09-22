@@ -281,7 +281,7 @@ setTimeout(() => {
     generateBlocks();
 }, randomNumberInterval(presetTime))
 
-/*//Event Listeners
+//Event Listeners
 addEventListener("keydown", e => {
     if(e.code === "Space"){
         if(!player.shouldJump){
@@ -291,11 +291,12 @@ addEventListener("keydown", e => {
             canScore = true;
         }
     }
-})*/
+})
 
 //Touch to jump event listener
-addEventListener("touchstart", "keydown", e => {
-    if(e.type === "touchstart" || e.code === "Space"){
+addEventListener("touchstart", e => {
+    if(e.type === "touchstart"){
+        console.log("jump")
         if(!player.shouldJump){
             jumpSFX.play();
             player.jumpCounter = 0;
