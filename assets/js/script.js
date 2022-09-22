@@ -294,7 +294,7 @@ addEventListener("keydown", e => {
 })*/
 
 //Touch to jump event listener
-document.addEventListener('touchstart', 'keydown', e => {
+addEventListener('touchstart', 'keydown', e => {
     if(e.type === 'touchstart' || e.code === 'Space'){
         if(!player.shouldJump){
             jumpSFX.play();
