@@ -10,9 +10,14 @@
 </head>
 <body>
 
-  <div class="splash">
-    <h1 class="fade-in">HyperCube</h1>
-    <div id="countdown"></div>
+  <div class="splash grid-container">
+    <div class="fade-in grid-item title">hyperCube</div>
+    <div class="fade-in grid-item synopsis">
+      <p>
+        Whilst on a routine patrol at the edge of the galaxy, your hyperdrive malfunctioned, rupturing space and time. You have been pulled into an alternate 2D reality where the rules of our universe no longer apply. After crashing on a deserted world, the mysterious laws of this place have transformed you into a hyperCube. Dark stars rain from the heavens and menacing black monoliths speed towards you. You must do the only thing you can do here: JUMP!
+      </p>
+    </div>
+    <div id="countdown" class="grid-item"></div>
   </div>
   
   <div class="stars">
@@ -74,8 +79,10 @@
         <button onclick="restartGame(this)">Click or Tap to Start</button>
     </div>
   </section>  
-    <h1>HyperCube</h1>
     <canvas width="600" height="600" id="canvas"></canvas>
+    <div id="footer">
+      <a href="https://www.freepik.com/free-vector/cosmic-background-alien-planet-deserted-landscape-with-mountains_13924256.htm#query=game%20background&position=12&from_view=keyword">Image by upklyak</a> on Freepik
+    </div>
     <!-- Link to JS file -->
     <script src="assets/js/script.js"></script>
 </body>

@@ -40,6 +40,35 @@ line-height: 90vh;
   animation: fadeIn 2s ease-in forwards;
 }
 
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  line-height: normal;
+  align-content: space-evenly;
+  font-family: inherit;
+  background: radial-gradient(ellipse at bottom, #758CDE 0%, #0c0d13 100%);
+}
+
+.title {
+  font-size: 48px;
+}
+
+.synopsis {
+  border: 1px solid #DADBD0;
+  width: 75%;
+  margin: auto;
+  padding: 1;
+  padding: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#countdown {
+  font-size: 1.5rem;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -517,6 +546,12 @@ h1 {
   }
 }/*# sourceMappingURL=style.css.map */
 
+#footer {
+  position: absolute;
+    bottom: 5%;
+    color: #dadbd0;
+}
+
 /* Media Query 600px and smaller */
 
 @media only screen and (max-width: 600px) {
@@ -534,5 +569,9 @@ h1 {
   #card{
     max-width: max-content;
     padding: 5%;
+  }
+
+  .synopsis{
+    font-size: 0.8rem;
   }
 }

@@ -1,12 +1,13 @@
+//Used for splash screen
 const splash = document.querySelector('.splash');
 
 document.addEventListener('DOMContentLoaded', (e)=>{
     setTimeout(()=>{
         splash.classList.add('display-none');
-    }, 10000);
+    }, 20000);
 })
 
-var timeleft = 10;
+var timeleft = 20;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
