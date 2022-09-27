@@ -27,8 +27,10 @@ const cardScore = document.getElementById("card-score");
 
 //Game SFX
 let scoreSFX = new Audio("https://archive.org/download/classiccoin/classiccoin.wav");
+scoreSFX.volume = 0.2;
 //let gameOverSFX = new Audio("https://archive.org/download/smb_gameover/smb_gameover.wav");
 let jumpSFX = new Audio("https://archive.org/download/jump_20210424/jump.wav");
+jumpSFX.volume = 0.2;
 
 let myAudio = document.getElementById('myAudio');
 //let play = document.getElementById('play');
