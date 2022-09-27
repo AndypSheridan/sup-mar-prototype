@@ -27,8 +27,29 @@ const cardScore = document.getElementById("card-score");
 
 //Game SFX
 let scoreSFX = new Audio("https://archive.org/download/classiccoin/classiccoin.wav");
-let gameOverSFX = new Audio("https://archive.org/download/smb_gameover/smb_gameover.wav");
+//let gameOverSFX = new Audio("https://archive.org/download/smb_gameover/smb_gameover.wav");
 let jumpSFX = new Audio("https://archive.org/download/jump_20210424/jump.wav");
+
+let myAudio = document.getElementById('myAudio');
+//let play = document.getElementById('play');
+let isPlaying = false;
+
+function togglePlay() {
+    isPlaying ? myAudio.pause() : myAudio.play();
+};
+
+myAudio.onplaying = function() {
+    isPlaying = true;
+};
+
+myAudio.onpause = function() {
+    isPlaying = false;
+};
+
+/*play.onclick = function() {
+    music.play();
+    return false;
+};*/
 
 //Used for 'setInterval'
 let presetTime = 1200;
@@ -254,7 +275,7 @@ function animate() {
         arrayBlock.slide();
         //End game as player and enemy have collided
         if(squaresColliding(player, arrayBlock)){
-            gameOverSFX.play();
+            //gameOverSFX.play();
             cardScore.textContent = score;
             card.style.display = "block";
 

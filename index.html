@@ -9,9 +9,7 @@
     <title>HyperCube</title>
 </head>
 <body>
-  <audio autoplay="true" loop>
-    <source src="/assets/audio/quietskies.wav" type="audio/wav">
-</audio>
+  
   <div class="splash grid-container">
     <div class="fade-in grid-item title">hyperCube</div>
     <div class="fade-in grid-item synopsis">
@@ -20,6 +18,12 @@
       </p>
     </div>
     <div id="countdown" class="grid-item"></div>
+    <div class="fade-in grid-item">
+      <button type="button" id="play" onclick="togglePlay()">Music</button>
+    <audio id="myAudio" loop>
+      <source src="/assets/audio/quietskies.wav" type="audio/wav">
+  </audio>
+    </div>
   </div>
   
   <div class="stars">
