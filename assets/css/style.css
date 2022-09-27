@@ -91,6 +91,27 @@ h1 {
   background-size: cover;
 }
 
+#canvasplay {
+  position: absolute;
+  top: 10%;
+  border: 1px solid #DADBD0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #dadbd0;
+  padding: 2%;
+}
+
+#splashplay {
+  bottom: 5%;
+  border: 1px solid #FFF;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #FFF;
+  padding: 2%;
+}
+
 #overlay {
   position: absolute;
   top: 0;
@@ -126,7 +147,6 @@ h1 {
   background-image: linear-gradient(to right, #758CDE, #0c0d13);
   padding: 10px;
   width: 90%;
-  border-radius: 20px;
   font-size: 20px;
   cursor: pointer;
 }
@@ -550,6 +570,8 @@ h1 {
   position: absolute;
     bottom: 5%;
     color: #dadbd0;
+    background: rgba(218,219,208, 0.3);
+    padding: 2%;
 }
 
 /* Media Query 600px and smaller */
