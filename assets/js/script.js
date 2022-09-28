@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     }, 20000);
 });
 
-var timeleft = 20;
-var downloadTimer = setInterval(function(){
+let timeleft = 20;
+let downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Finished";
@@ -17,6 +17,8 @@ var downloadTimer = setInterval(function(){
   }
   timeleft -= 1;
 }, 1000);
+
+
 
 //Extract context to allow interaction with canvas
 const canvas = document.getElementById("canvas");
@@ -47,6 +49,8 @@ myAudio.onplaying = function() {
 myAudio.onpause = function() {
     isPlaying = false;
 };
+
+
 
 /*play.onclick = function() {
     music.play();
@@ -305,6 +309,20 @@ setTimeout(() => {
 }, randomNumberInterval(presetTime));
 
 //Event Listeners
+
+let skipButton = document.getElementById('skip-intro');
+skipButton.addEventListener('click', function(e) {
+    if(e.type === 'click') {
+       splash.style.display = "none";
+    }
+});
+
+skipButton.addEventListener('touchstart', function(e) {
+    if(e.type === 'touchstart') {
+       splash.style.display = "none";
+    }
+});
+
 addEventListener("keydown", e => {
     if(e.code === "Space"){
         if(!player.shouldJump){

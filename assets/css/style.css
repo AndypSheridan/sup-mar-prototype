@@ -40,8 +40,6 @@ line-height: 90vh;
   animation: fadeIn 2s ease-in forwards;
 }
 
-
-
 .grid-container {
   display: grid;
   grid-template-columns: auto;
@@ -92,14 +90,15 @@ h1 {
 }
 
 #canvasplay {
+  display: block;
   position: absolute;
-  top: 10%;
+  top: 5%;
   border: 1px solid #DADBD0;
   background: transparent;
   font-family: inherit;
   font-size: 1.2rem;
   color: #dadbd0;
-  padding: 2%;
+  padding: 1rem;
 }
 
 #splashplay {
@@ -109,7 +108,16 @@ h1 {
   font-family: inherit;
   font-size: 1.2rem;
   color: #FFF;
-  padding: 2%;
+  padding: 1rem;
+}
+
+#skip-intro {
+  border: 1px solid #DADBD0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #FFF;
+  padding: 1rem;
 }
 
 #overlay {
@@ -568,10 +576,11 @@ h1 {
 
 #footer {
   position: absolute;
-    bottom: 5%;
-    color: #dadbd0;
-    background: rgba(218,219,208, 0.3);
-    padding: 2%;
+  display: block;
+  bottom: 2%;
+  color: #dadbd0;
+  background: rgba(218,219,208, 0.3);
+  padding: 1rem;
 }
 
 /* Media Query 600px and smaller */
