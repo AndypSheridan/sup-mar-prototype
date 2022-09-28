@@ -311,7 +311,7 @@ setTimeout(() => {
 
 canvasPlay.addEventListener('touchstart', function(e) {
     if(e.type === 'touchstart') {
-        togglePlay();
+        myAudio.play();
     }
 })
 
