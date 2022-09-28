@@ -18,14 +18,14 @@ let downloadTimer = setInterval(function(){
   timeleft -= 1;
 }, 1000);
 
-
-
 //Extract context to allow interaction with canvas
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 const card = document.getElementById("card");
 const cardScore = document.getElementById("card-score");
+const splashPlay = document.getElementById("splashplay");
+const canvasPlay = document.getElementById("canvasplay");
 
 //Game SFX
 let scoreSFX = new Audio("https://archive.org/download/classiccoin/classiccoin.wav");
@@ -35,7 +35,6 @@ let jumpSFX = new Audio("https://archive.org/download/jump_20210424/jump.wav");
 jumpSFX.volume = 0.2;
 
 let myAudio = document.getElementById('myAudio');
-//let play = document.getElementById('play');
 let isPlaying = false;
 
 function togglePlay() {
@@ -309,6 +308,12 @@ setTimeout(() => {
 }, randomNumberInterval(presetTime));
 
 //Event Listeners
+
+canvasPlay.addEventListener('touchstart', function(e) {
+    if(e.type === 'touchstart') {
+        togglePlay();
+    }
+})
 
 let skipButton = document.getElementById('skip-intro');
 skipButton.addEventListener('click', function(e) {
