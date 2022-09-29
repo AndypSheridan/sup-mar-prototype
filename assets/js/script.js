@@ -309,7 +309,7 @@ setTimeout(() => {
 
 //Event Listeners
 
-canvasPlay.addEventListener('touchstart', function(e) {
+splashPlay.addEventListener('touchstart', function(e) {
     if(e.type === 'touchstart') {
         myAudio.play();
     }
