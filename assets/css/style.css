@@ -58,13 +58,13 @@ line-height: 90vh;
   width: 75%;
   margin: auto;
   padding: 10px;
-  padding: 1rem;
-  font-size: 1.3rem;
+  padding: 0.8rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 #countdown {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 body {
@@ -84,7 +84,6 @@ h1 {
 }
 
 #canvas {
-  border-radius: 5px;
   background-image: url('../images/desertedplanet1.jpg');
   background-size: cover;
 }
@@ -96,9 +95,9 @@ h1 {
   border: 1px solid #DADBD0;
   background: transparent;
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #dadbd0;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 #splashplay {
@@ -106,18 +105,18 @@ h1 {
   border: 1px solid #FFF;
   background: transparent;
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #FFF;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 #skip-intro {
   border: 1px solid #DADBD0;
   background: transparent;
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #FFF;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 #overlay {
@@ -577,10 +576,15 @@ h1 {
 #footer {
   position: absolute;
   display: block;
-  bottom: 2%;
+  bottom: 15%;
   color: #dadbd0;
   background: rgba(218,219,208, 0.3);
-  padding: 1rem;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+}
+
+.background-credit {
+  color: #FFF;
 }
 
 /* Media Query 600px and smaller */

@@ -49,8 +49,6 @@ myAudio.onpause = function() {
     isPlaying = false;
 };
 
-
-
 /*play.onclick = function() {
     music.play();
     return false;
