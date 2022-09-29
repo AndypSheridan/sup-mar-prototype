@@ -84,17 +84,16 @@
   </div>
 
   <section id="overlay">
+    <button type="button" id="canvasplay" onclick="togglePlay()">Toggle Music</button>
+    <audio id="myAudio" loop>
+      <source src="/assets/audio/quietskies.wav" type="audio/wav">
+  </audio>
     <div id="card">
         <p>Your score: <span id="card-score">0</span></p>
         <button onclick="restartGame(this)">Start</button>
     </div>
   </section>  
-    <div>
-      <button type="button" id="canvasplay" onclick="togglePlay()">Toggle Music</button>
-    <audio id="myAudio" loop>
-      <source src="/assets/audio/quietskies.wav" type="audio/wav">
-  </audio>
-    </div>
+    
     <canvas width="600" height="600" id="canvas"></canvas>
     <div id="footer">
       <a class="background-credit" href="https://www.freepik.com/free-vector/cosmic-background-alien-planet-deserted-landscape-with-mountains_13924256.htm#query=game%20background&position=12&from_view=keyword">Image by upklyak</a> on Freepik

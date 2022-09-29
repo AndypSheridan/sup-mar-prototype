@@ -98,6 +98,7 @@ h1 {
   font-size: 1rem;
   color: #dadbd0;
   padding: 0.8rem;
+  z-index: 2;
 }
 
 #splashplay {
