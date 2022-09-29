@@ -307,11 +307,8 @@ setTimeout(() => {
 
 //Event Listeners
 
-splashPlay.addEventListener('touchstart', function(e) {
-    if(e.type === 'touchstart') {
-        myAudio.play();
-    }
-})
+splashPlay.addEventListener('click', togglePlay, false);
+canvasPlay.addEventListener('click', togglePlay, false);
 
 let skipButton = document.getElementById('skip-intro');
 skipButton.addEventListener('click', function(e) {
