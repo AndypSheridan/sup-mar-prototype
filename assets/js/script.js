@@ -340,7 +340,7 @@ addEventListener("keydown", e => {
 });
 
 //Touch to jump event listener
-addEventListener("touchstart", e => {
+canvas.addEventListener("touchstart", e => {
     if(e.type === "touchstart"){
         e.preventDefault();
         if(!player.shouldJump){
