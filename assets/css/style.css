@@ -99,7 +99,6 @@ h1 {
   color: #dadbd0;
   padding: 0.8rem;
   cursor: pointer;
-  z-index: 1;
 }
 
 #splashplay {
@@ -111,7 +110,6 @@ h1 {
   color: #FFF;
   padding: 0.8rem;
   cursor: pointer;
-  z-index: 1;
 }
 
 #skip-intro {
