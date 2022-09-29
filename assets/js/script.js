@@ -307,8 +307,8 @@ setTimeout(() => {
 
 //Event Listeners
 
-splashPlay.addEventListener('click', togglePlay, false);
-canvasPlay.addEventListener('click', togglePlay, false);
+//splashPlay.addEventListener('click', togglePlay, false);
+//canvasPlay.addEventListener('click', togglePlay, false);
 
 let skipButton = document.getElementById('skip-intro');
 skipButton.addEventListener('click', function(e) {
