@@ -98,7 +98,6 @@ h1 {
   font-size: 1rem;
   color: #dadbd0;
   padding: 0.8rem;
-  z-index: 2;
 }
 
 #splashplay {
@@ -130,6 +129,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
+  pointer-events: none;
 }
 
 #overlay #card {
