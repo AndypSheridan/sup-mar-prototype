@@ -309,6 +309,7 @@ setTimeout(() => {
 
 splashPlay.addEventListener('touchstart', function(e) {
     if(e.type === 'touchstart') {
+        e.preventDefault;
         togglePlay();
     }
 });
@@ -323,6 +324,7 @@ skipButton.addEventListener('click', function(e) {
 
 skipButton.addEventListener('touchstart', function(e) {
     if(e.type === 'touchstart') {
+       e.preventDefault;
        splash.style.display = "none";
     }
 });
@@ -341,6 +343,7 @@ addEventListener("keydown", e => {
 //Touch to jump event listener
 addEventListener("touchstart", e => {
     if(e.type === "touchstart"){
+        e.preventDefault();
         if(!player.shouldJump){
             jumpSFX.play();
             player.jumpCounter = 0;
